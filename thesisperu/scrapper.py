@@ -13,7 +13,7 @@ def get_html(url, element='div', css = 'artifact-description'):
 	# return a sublinks 
 	return s_items
 
-def get_main_items(self, sub_items, master_dir = '', prefix = None):
+def get_main_items(sub_items, master_dir = '', prefix = None):
 
 	if prefix is None:
 		raise "No Prefix provided"
