@@ -50,13 +50,13 @@ def get_main_items(sub_items, master_dir = '', prefix = None):
 	)
 	return sub_items_df
 
-def search_sub_items(main_items_df):
+def search_sub_items(main_items_df, prefix):
 	urls = main_items_df.urls.to_numpy()
 	name = main_items_df.dir_name.to_numpy()
 	sub_df = pd.DataFrame()
 
 	for i, url in tqdm.tqdm(enumerate(urls)):
-		sub_url_df = get_main_items(get_html(url), name[i])
+		sub_url_df = get_main_items(get_html(url), name[i], prefix=prefix)
 		sub_df = pd.concat((sub_df, sub_url_df))
 	return sub_df
 
