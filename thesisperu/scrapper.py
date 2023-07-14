@@ -2,7 +2,7 @@ import requests as r
 from bs4 import BeautifulSoup as bs
 import numpy as np, pandas as np
 import tqdm, warnings, re
-from dataclasses import dataclass
+# from dataclasses import dataclass
 
 warnings.filterwarnings('ignore')
 
