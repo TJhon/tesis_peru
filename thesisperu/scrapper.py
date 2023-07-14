@@ -7,7 +7,7 @@ import tqdm, warnings, re
 warnings.filterwarnings('ignore')
 
 def get_html(url, element='div', css = 'artifact-description'):
-	response = r.get(url, verify=false).content
+	response = r.get(url, verify=False).content
 	html = bs(response, 'html.parser')
 	s_items = html.find_all(element, class_ = css)
 	# return a sublinks 
