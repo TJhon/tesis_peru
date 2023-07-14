@@ -31,6 +31,4 @@ jobs:
           TWINE_USERNAME: ${{ secrets.PYPI_USER}}
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         run: |
-          sudo apt-get install tree
-          tree /home/runner/work/csdid
           twine upload dist/*
